@@ -1,0 +1,263 @@
+
+
+
+
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+$white: #F8FCFF;
+$gray-500: #F3F3FF;
+$green: #0AA14B;
+$blue: #313E5B;
+
+$primary: $blue;
+
+/*
+    TYPOGRAPHY
+*/
+
+.top-intro-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: $primary;
+}
+
+.service-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: $black;
+}
+
+@mixin title {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: $green;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+}
+
+.service-title {
+  @include title;
+}
+
+.section-title {
+  @include title;
+  text-align: center;
+  margin-top: 5rem;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: $black;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+@mixin general-text {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  line-height: 1.7rem;
+  font-size: 0.9rem;
+  color: $blue;
+}
+
+/*
+    NAVBAR
+*/
+.navbar-light {
+  background-color: $white;
+}
+
+.btn-rounded {  
+  @include general-text;
+  padding: 0rem 1.5rem;
+  margin-left: 3rem;
+  border: 0.1rem solid rgba($green, 0.75);
+  background-color: $green;
+  color: $white;
+  display: block;
+}
+
+.sub-header {
+  padding-top: 0;
+  margin-top: 0;
+
+  li {
+
+    a {
+      @include general-text;
+      color: $blue;
+    }
+
+    :hover {
+      color: $green;
+    }
+  }
+}
+
+.navbar-toggler{
+  margin-right: 1.5rem;
+  background-color: $green;
+  
+}
+
+.social-icons{
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+
+
+/*
+    SERVICES SECTION
+*/
+
+.services {
+  position: relative;
+  padding: 1rem 0;
+
+  &__content {
+    padding: 1rem;
+    margin-top: 0;
+
+    p {
+      @include general-text;
+      margin-top: 2.5rem;
+    }
+
+  }
+}
+
+/*
+  HOW IT WORKS SECTION
+*/
+
+.how-it-works {
+  margin-top: 6rem;
+
+
+  &__image {
+    margin: auto;
+    width: 50%;
+    border: 3px dashed black;
+    border-radius: 50%;
+    padding: 10px;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+  h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $black;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  p {
+    @include general-text;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+/*
+  CASE STUDIES SECTION
+*/
+
+.case-studies-card {
+  margin-top: 4rem;
+
+}
+
+.case-studies-card-image {
+  img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &:hover {
+
+    img {
+      transform: scale(1.1);
+      transition-duration: 1s;
+      transition-property: all;
+    }
+  }
+}
+
+.case-studies-card-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: $black;
+  text-transform: capitalize;
+  text-align: left;
+  margin-top: 1rem;
+  text-decoration: none;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+.case-studies-card-text {
+  @include general-text;
+}
+
+/*
+ FOOTER SECTION
+*/
+.footer {
+  background-color: $white;
+  margin: 0px auto;
+  padding: 6rem 0 1rem 0 ;
+  color: $blue;
+}
+
+.footer i,
+li {
+  margin: 0.7rem;
+
+}
+
+.footer{
+  i{color: $blue}
+  li {
+
+    a {
+      @include general-text;
+      text-decoration: none;
+      color: $blue;
+    }
+
+    :hover {
+      color: $green;
+    }
+  }  
+}
+
+.footer address{
+  display: block;
+}
+
+.footer .col-auto p{
+  @include general-text;
+}
+
